@@ -4,7 +4,7 @@ const port = 3000;
 
 // Middleware to log requests
 app.use((req, res, next) => {
-  console.log(`${req.method} request received at ${req.url}`);
+  console.log(`${req.method} request received at updated: ${req.url}`);
   next();
 });
 
