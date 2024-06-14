@@ -27,10 +27,10 @@ jobs:
     - name: Deploy to server via SSH
       uses: appleboy/ssh-action@v0.1.7
       with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: ${{ secrets.SSH_PORT }}
+        host: ${{ secrets.MULTIPLE_DOMAIN_SSH_HOST }}
+        username: ${{ secrets.MULTIPLE_DOMAIN_SSH_USERNAME }}
+        password: ${{ secrets.MULTIPLE_DOMAIN_SSH_PASSWORD }}
+        port: ${{ secrets.MULTIPLE_DOMAIN_SSH_PORT }}
         script: |
           cd /var/www # Navigate to your app directory on the server
           git pull origin main # Pull the latest changes from your repository
