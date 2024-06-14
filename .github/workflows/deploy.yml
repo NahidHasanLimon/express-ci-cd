@@ -33,6 +33,7 @@ jobs:
         port: ${{ secrets.MULTIPLE_DOMAIN_SSH_PORT }}
         script: |
           cd /var/www # Navigate to your app directory on the server
+          git clone https://github.com/nahidhasanlimon/express-ci-cd.git
           git pull origin main # Pull the latest changes from your repository
           npm install # Install dependencies on the server
           pm2 restart all # Restart your application using PM2 (or any other process manager you use)
