@@ -19,9 +19,6 @@ jobs:
         password: ${{ secrets.MULTIPLE_DOMAIN_SSH_PASSWORD }}
         port: ${{ secrets.MULTIPLE_DOMAIN_SSH_PORT }}
         script: |
-         # Verify Node.js and npm installation
-          # node -v
-          # npm -v
           cd /var/www/express-ci-cd # Navigate to your app directory on the server
           git pull origin main # Pull the latest changes from your repository
           export NVM_DIR=~/.nvm
